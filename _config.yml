@@ -36,7 +36,7 @@ feed: /atom.xml
 #菜单配置 icon-archives\f15c
 nav:
   - text: 首页
-    url: /index.html
+    url: /
     icon: icon-home
     class: home
   - text: 文章归档
