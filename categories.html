@@ -1,0 +1,30 @@
+---
+layout: default
+title: 文章分类
+description: 这里记录了我在编程时遇到的一些问题，和解决这些问题的一些方法。还有一些是我对编程的一些看法观点，以及学习语言时的一些笔记和心得体会。
+keywords: 博客, 编程, 笔记, php, mysql, linux
+---
+
+<p class="lotus-breadcrub">
+    <a href="{{ site.url }}/" rel="nofollow" rel="nofollow" title="首页">首页</a>
+    <span> &gt; </span>
+    {{ page.title }}
+</p>
+
+<h1 class="lotus-pagetit">Categories</h1>
+<article id="categories">
+<ul class="lotus-cat lotus-archives">
+    {% for category in site.categories %}
+    <li class="cat-item">
+        <span>{{ category | first }} &nbsp;<em class="count">({{ category | last | size }}&nbsp;篇文章)</em></span>
+        {% if category.last.size %}
+            <ul>
+            {% for post in category.last %}
+                <li><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>
+</article>

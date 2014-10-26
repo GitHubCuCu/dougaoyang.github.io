@@ -1,0 +1,23 @@
+---
+layout: default
+title: 友情链接
+description: 这里记录了我在编程时遇到的一些问题，和解决这些问题的一些方法。还有一些是我对编程的一些看法观点，以及学习语言时的一些笔记和心得体会。
+keywords: 博客, 编程, 笔记, php, mysql, linux, 知识交流
+---
+
+<p class="lotus-breadcrub">
+    <a href="{{ site.url }}/" rel="nofollow" title="首页">首页</a>
+    <span> &gt; </span>
+    {{ page.title }}
+</p>
+
+<h1 class="lotus-pagetit">Links</h1>
+<article id="Links">
+    <ul>
+        {% for link in site.link %}
+            <li>
+                <a target="_blank" href="{{ link.url }}" title="{{link.text}}">{{link.text}}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</article>

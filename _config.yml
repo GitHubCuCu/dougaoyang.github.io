@@ -1,0 +1,80 @@
+# Where things are
+source:       .
+destination:  ./_site
+layouts:      ./_layouts
+paginate:     8
+
+# Handling Reading
+encoding:     "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+textile_ext:  "textile"
+
+# Filtering Content
+show_drafts:  null
+limit_posts:  0
+future:       true
+unpublished:  false
+
+# Conversion
+markdown:     rdiscount
+highlighter:  pygments
+lsi:          false
+excerpt_separator: "\n\n"
+
+# Outputting
+# permalink:     date
+permalink: /:year/:month/:day/:title.html
+paginate_path: /page:num
+timezone:      null
+
+#站点基础配置
+title: 当当虾的编程记录
+subTitle: 这个世界上，没有什么东西是得不到的，只有抓不住而从掌心中悄然流走的...
+description: 这里记录了我在编程时遇到的一些问题，和解决这些问题的一些方法。还有一些是我对编程的一些看法观点，以及学习语言时的一些笔记和心得体会。
+feed: /atom.xml
+
+#菜单配置 icon-archives\f15c
+nav:
+  - text: 首页
+    url: /index.html
+    icon: icon-home
+    class: home
+  - text: 文章归档
+    url: /archives.html
+    icon: icon-book
+    class: none
+  - text: 文章分类
+    url: /categories.html
+    icon: icon-list
+    class: none
+  - text: 关于我
+    url: /contact.html
+    icon: icon-heart
+    class: none
+  - text: 博客源代码
+    url: https://github.com/dougaoyang/dougaoyang.github.io
+    icon: icon-github
+    class: none
+    target: '_blank'
+
+page:
+  - text: 文章归档
+    url: /archives.html
+    last: true
+  - text: 文章分类
+    url: /categories.html
+    last: true
+  - text: 关于我
+    url: /contact.html
+    last: true
+  - text: 友情链接
+    url: /links.html
+    last: false
+
+link:
+  - text: E简设计
+    url: http://www.1ckt.com/
+    last: true
+
+author:
+  name: Dougaoyang

@@ -1,0 +1,50 @@
+---
+layout: default
+title: 文章归档
+description: 这里记录了我在编程时遇到的一些问题，和解决这些问题的一些方法。还有一些是我对编程的一些看法观点，以及学习语言时的一些笔记和心得体会。
+keywords: 博客, 编程, 笔记, php, mysql, linux
+---
+
+<p class="lotus-breadcrub">
+    <a href="{{ site.url }}/index.html" rel="nofollow" rel="nofollow" title="首页">首页</a>
+    <span> &gt; </span>
+    {{ page.title }}
+</p>
+
+<h1 class="lotus-pagetit">Archives</h1>
+<article id="archives">
+
+{% for post in site.posts  %}
+  {% capture this_month %}{{ post.date | date: "%b %Y" }}{% endcapture %}
+  {% capture next_month %}{{ post.previous.date | date: "%b %Y" }}{% endcapture %}
+
+  {% if forloop.first %}
+    <ul class="lotus-archives">
+        <li><span>{{this_month}} &nbsp;<em class="count"></em></span>
+            <ul>
+  {% endif %}
+
+                <li>{{ post.date | date: "%d日" }} : <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+
+  {% if forloop.last %}
+            </ul>
+        </li>
+    </ul>
+  {% else %}
+    {% if this_month != next_month %}
+            </ul>
+        </li>
+    </ul>
+    <ul>
+          <li><span>{{next_month}} &nbsp;</span>
+            <ul>
+    {% endif %}
+  {% endif %}
+
+
+{% endfor %}
+
+
+
+
+</article>
