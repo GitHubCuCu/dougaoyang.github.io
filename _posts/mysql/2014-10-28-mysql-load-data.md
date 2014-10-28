@@ -15,11 +15,11 @@ keywords: mysql, dump, load, infile, outfile
 
 创建t1表，只有一个字段，往数据表中插入几行数据
 
-	insert into t1 values(1),(2),(3);  
+	INSERT INTO `t1` VALUES (1),(2),(3);  
 
 然后使用mysqldump开始备份
 
-	mysqldump -uroot -proot test -F -l > /tmp/test.sql
+>mysqldump -uroot -proot test -F -l > /tmp/test.sql
 
 这样我们就备份完毕了，我们可以查看一下test.sql的文件格式
 
@@ -50,11 +50,11 @@ keywords: mysql, dump, load, infile, outfile
 导出outfile的使用
 ----------------
 
-	select * from t1 into outfile "/tmp/test.sql"
+	SELECT * FROM `t1` INTO OUTFILE "/tmp/test.sql"
 
 可以通过select查询将要导出的数据表和数据表的字段导出来，可以导出全部列和指定列，如：
 
-	select id from t1 into outfile "/tmp/test.sql"
+	SELECT `id` FROM `t1` INTO OUTFILE "/tmp/test.sql"
 
 这样就导出了t1表的id列。
 
@@ -67,11 +67,11 @@ keywords: mysql, dump, load, infile, outfile
 导入load data的使用
 ------------------
 
-	load data infile "/tmp/test.sql" into table t1
+	LOAD DATA INFILE "/tmp/test.sql" INTO TABLE `t1`
 
 这样是导入到t1表的全部列中，也可以导入到某一列或几列中
 
-	load data infile "/tmp/test.sql" into table t1(id)
+	LOAD DATA INFILE "/tmp/test.sql" INTO TABLE `t1`(`id`)
 
 比较速度
 -------

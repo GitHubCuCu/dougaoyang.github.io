@@ -233,5 +233,6 @@ $(document).ready(function() {
     //run
     iLotus.init.run();
     //pretty
+    $("pre").addClass("prettyprint");
     prettyPrint();
 });

@@ -66,10 +66,15 @@ keywords: php, jpg
 
 然后进入到上级目录内，开始编译gd扩展
 
-/usr/local/php/bin/phpize 
+>/usr/local/php/bin/phpize 
 
-然后 ./configure --with-php-config=/usr/local/php/bin/php-config --with-jpeg-dir=/usr/local/jpeg --with-gd编译完成
+然后 
+>./configure --with-php-config=/usr/local/php/bin/php-config --with-jpeg-dir=/usr/local/jpeg --with-gd
 
-然后在php.ini中添加一行extension=gd.so
+编译完成
+
+然后在php.ini中添加一行
+
+>extension=gd.so
 
 重启apache服务，就会看到在libjpeg version 后显示的不再是unknown了 ，问题解决了
