@@ -41,14 +41,14 @@
               {% assign active = 'current' %}
             {% endif %}
             {% if link.class == 'home' %}
-                {% assign homeClass = 'home ' %}
+                {% assign homeClass = 'home current' %}
             {% endif %}
             {% if link.target == '_blank' %}
                 {% assign link_target = 'target="_blank"' %}
             {% endif %}
-            <li class="{{ homeClass }}{{ active }}">
+            <li class="{{ homeClass }}">
                 <a {{ link_target }} href="{{ link.url }}" rel="bookmark" title="{{link.text}}">
-                    <i class="{{ link.icon }}"></i>
+                    <i id="{{ link.id }}" class="{{ link.icon }}"></i>
                 </a>
                 {{ indicator }}
             </li>
