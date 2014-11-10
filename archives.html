@@ -14,37 +14,44 @@ keywords: 博客, 编程, 笔记, php, mysql, linux
 <h1 class="lotus-pagetit">Archives</h1>
 <article id="archives">
 
-{% for post in site.posts  %}
-  {% capture this_month %}{{ post.date | date: "%b %Y" }}{% endcapture %}
-  {% capture next_month %}{{ post.previous.date | date: "%b %Y" }}{% endcapture %}
-
-  {% if forloop.first %}
-    <ul class="lotus-archives">
-        <li><span>{{this_month}} &nbsp;<em class="count"></em></span>
-            <ul>
-  {% endif %}
-
-                <li>{{ post.date | date: "%d日" }} : <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-
-  {% if forloop.last %}
-            </ul>
-        </li>
-    </ul>
-  {% else %}
-    {% if this_month != next_month %}
-            </ul>
-        </li>
-    </ul>
-    <ul>
-          <li><span>{{next_month}} &nbsp;</span>
-            <ul>
+{% assign count = 0 %}
+{% for post in site.posts %}
+    {% if forloop.first %}
+        {% capture saved_month %}{{ post.date | date: "%b %Y" }}{% endcapture %}
+        {% assign count = 1 %}
+        <ul class="lotus-archives">
+    {% else %}
+        {% capture this_month %}{{ post.date | date: "%b %Y" }}{% endcapture %}
+        {% if this_month == saved_month %}
+            {% assign count = count | plus: 1 %}
+        {% else %}
+            <li><span>{{ saved_month }} &nbsp;<em class="count">({{ count }}&nbsp;篇文章)</em></span>
+                <ul>
+            {% for _post in site.posts %}
+                {% capture _this_month %}{{ _post.date | date: "%b %Y" }}{% endcapture %}
+                {% if _this_month == saved_month %}
+                    <li>{{ _post.date | date: "%d日" }} : <a href="{{ _post.url }}" title="{{ _post.title }}">{{ _post.title }}</a></li>
+                {% endif %}
+            {% endfor %}
+                </ul>
+            </li>
+            {% assign count = 1 %}
+            {% capture saved_month %}{{ post.date | date: "%b %Y" }}{% endcapture %}
+        {% endif %}
     {% endif %}
-  {% endif %}
-
-
+    {% if forloop.last %}
+        <li><span>{{ saved_month }} &nbsp;<em class="count">({{ count }}&nbsp;篇文章)</em></span>
+            <ul>
+        {% for _post in site.posts %}
+            {% capture _this_month %}{{ _post.date | date: "%b %Y" }}{% endcapture %}
+            {% if _this_month == saved_month %}
+                <li>{{ _post.date | date: "%d日" }} : <a href="{{ _post.url }}" title="{{ _post.title }}">{{ _post.title }}</a></li>
+            {% endif %}
+        {% endfor %}
+            </ul>
+        </li>
+    </ul>
+    {% endif %}
 {% endfor %}
-
-
-
 
 </article>
