@@ -1,6 +1,6 @@
 ---
 layout: post
-title: bootstrap的modal的data-remote属性无效的问题
+title: bootstrap中modal的data-remote属性无效的问题
 category: HTML/HTML5
 description: 
 keywords: bootstrap, data-remote, html
