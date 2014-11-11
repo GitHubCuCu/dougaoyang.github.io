@@ -2,7 +2,7 @@
 layout: post
 title: bootstrap中modal的data-remote属性无效的问题
 category: HTML/HTML5
-description: 
+description: 解决3.1以后版本的bootstrap模态框的远程内容失效的问题
 keywords: bootstrap, data-remote, html
 ---
 

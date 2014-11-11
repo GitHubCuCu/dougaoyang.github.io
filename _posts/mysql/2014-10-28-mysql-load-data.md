@@ -2,7 +2,7 @@
 layout: post
 title: 使用load导出mysql表数据
 category: mysql数据库
-description: 
+description: 使用mysql的load data来快速的导入导出数据
 keywords: mysql, dump, load, infile, outfile
 ---
 　　当我们需要备份数据库时，需要导出数据，我们一般是使用mysqldump命令来进行数据的导出，下面我们先来试验一下
