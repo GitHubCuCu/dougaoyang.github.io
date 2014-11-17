@@ -11,7 +11,7 @@ keywords: 博客, 编程, 笔记, php, mysql, linux
     </hgroup><!-- //violet-site -->
 </section>
 <article class="lotus-article">
-{% for rpost in paginator.posts limit:1 %}
+{% for rpost in site.posts limit:1 %}
     <h3><a href="{{ rpost.url }}" title="{{ rpost.title }}" rel="bookmark">{{ rpost.title }}</a></h3>
     <p itemprop="description">{{ rpost.description }}</p>
     <p class="lotus-date">{{ rpost.date | date_to_utc | date: '%Y.%m.%d' }}</p>
