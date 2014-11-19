@@ -6,17 +6,17 @@ description: 解决3.1以后版本的bootstrap模态框的远程内容失效的�
 keywords: bootstrap, data-remote, html
 ---
 
-##问题产生
+##问题
 
-　　最近在公司更新一个项目是发现一个问题，就是bootstrap的模态框的data-remote属性没有效果，但是发现老项目里是有效果的，发现很奇怪，Google后终于发现问题所在，于是记录下来。
+最近在公司更新一个项目是发现一个问题，就是bootstrap的模态框的data-remote属性没有效果，但是发现老项目里是有效果的，发现很奇怪，Google后终于发现问题所在，于是记录下来。
 
-　　链接地址 <http://stackoverflow.com/questions/18378720/bootstrap-3-with-remote-modal>
+链接地址 <http://stackoverflow.com/questions/18378720/bootstrap-3-with-remote-modal>
 
-　　原因是在bootstrap3.1之后modal的一些属性发生了变化，远程的内容要插入到`.modal-content`选择器里面。可以看一下两者的区别。
+原因是在bootstrap3.1之后modal的一些属性发生了变化，远程的内容要插入到`.modal-content`选择器里面。可以看一下两者的区别。
 
 ##3.1之前的版本
 
-####模态框页	
+###模态框页	
 
 	<a href="#" data-toggle="modal" data-target="#myModal"><img src="images/ball.gif" alt="Add Account"/></a>
 	
@@ -24,7 +24,7 @@ keywords: bootstrap, data-remote, html
 		
 	</div>
 
-####远程页面parentPage.html
+###远程页面parentPage.html
 
 	<div class="modal-dialog">
 	    <div class="modal-content">
@@ -43,7 +43,7 @@ keywords: bootstrap, data-remote, html
 
 ##3.1之后的版本
 
-####模态框页	
+###模态框页	
 
 	<a href="./popups/remotePage.html" data-toggle="modal" data-target="#myModal"><img src="images/ball.gif" alt="Add Account"/></a>
 
@@ -55,7 +55,7 @@ keywords: bootstrap, data-remote, html
 	</div>
 	</div>
 
-####远程页面parentPage.html
+###远程页面parentPage.html
 
 	<div class="modal-header">Header</div>
 	<div class="modal-body">
@@ -67,4 +67,4 @@ keywords: bootstrap, data-remote, html
 
 ##总结
 
-　　这是bootstrap跨版本所产生的问题，因此当我们使用开源的框架时，要时刻留意每个版本直接作出的改动。这样，我们才能够避免出现类似的错误，愿与大家共同进步。
+这是bootstrap跨版本所产生的问题，因此当我们使用开源的框架时，要时刻留意每个版本直接作出的改动。这样，我们才能够避免出现类似的错误，愿与大家共同进步。
