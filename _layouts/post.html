@@ -11,8 +11,16 @@ layout: default
     <span> &gt; </span>
     {{ page.title }}
 </p>
+
+<div id="post-menu">
+    <span title="内容目录" class="dropdown-toggle"><i id='menu-icon' class="icon-list"></i></span>
+    <div id="menuContent" class="dropdown-menu"></div>
+</div>
+
 <h1 class="lotus-pagetit">{{ page.title }}</h1>
+
 <p class="lotus-meta"><time class="date" pubdate="{{ page.date  | date: "%b %d, %Y" }}">{{ page.date | date: "%b %d, %Y" }}</time></p>
+
 <article  itemscope itemtype="http://schema.org/Article" class="lotus-post">
 {{ content }}
 </article>

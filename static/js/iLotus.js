@@ -107,6 +107,27 @@ PR_NOCODE:"nocode",PR_PLAIN:"pln",PR_PUNCTUATION:"pun",PR_SOURCE:"src",PR_STRING
  * site: http://www.pizn.net
  */
 $(document).ready(function() {
+    var isMobile = {
+        Android: function() {
+            return navigator.userAgent.match(/Android/i);
+        }
+        ,BlackBerry: function() {
+            return navigator.userAgent.match(/BlackBerry/i);
+        }
+        ,iOS: function() {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        }
+        ,Opera: function() {
+            return navigator.userAgent.match(/Opera Mini/i);
+        }
+        ,Windows: function() {
+            return navigator.userAgent.match(/IEMobile/i);
+        }
+        ,any: function() {
+            var that = this;
+            return (that.Android() || that.BlackBerry() || that.iOS() || that.Opera() || that.Windows());
+        }
+    };
     //为什么我会写这个呢？
     var iLotus = {
         Version: "1.0",
@@ -126,6 +147,8 @@ $(document).ready(function() {
         _scrollTop: function() {
             if(jQuery.scrollTo) {
                 jQuery.scrollTo(0, 800, {queue:true});
+            }else{
+                $('body, html').animate({ scrollTop: 0 }, 800, 'swing');
             }
         },
         _scrollScreen: function() {
@@ -222,12 +245,130 @@ $(document).ready(function() {
         }
     }
     /**
+     * iLotus.buildMenu
+     */
+    iLotus.buildMenu = {
+        _changeLeft: function() {
+            var that = this, right;
+            var bodyWidth = $("body").width();
+            right = 20;
+            return bodyWidth-right;
+        },
+        _resizeWindow: function(left) {
+            var that = this;
+            $("#post-menu").css({
+                'margin-left': left + "px"
+            });
+        },
+        _initHeading : function(){
+            var h2 = [];
+            var h3 = [];
+            var h2index = 0;
+
+            $.each($('.lotus-post h2, .lotus-post h3'),function(index,item){
+                if(item.tagName.toLowerCase() == 'h2'){
+                    var h2item = {};
+                    h2item.name = $(item).text();
+                    h2item.id = 'menuIndex'+index;
+                    h2.push(h2item);
+                    h2index++;
+                }else{
+                    var h3item = {};
+                    h3item.name = $(item).text();
+                    h3item.id = 'menuIndex'+index;
+                    if(!h3[h2index-1]){
+                        h3[h2index-1] = [];
+                    }
+                    h3[h2index-1].push(h3item);
+                }
+                item.id = 'menuIndex' + index;
+            });
+
+            return {h2:h2,h3:h3};
+        },
+        _genTmpl : function(){
+            var that = this;
+            var h1txt = $('h1').text();
+            var tmpl = '<ul>';
+
+            var heading = that._initHeading();
+            var h2 = heading.h2;
+            var h3 = heading.h3;
+
+            // tmpl = '<li class="h1"><a href="#">' + h1txt + '</a></li>';
+
+            for(var i=0;i<h2.length;i++){
+                tmpl += '<li class="h2"><a href="#" data-id="'+h2[i].id+'">'+h2[i].name+'</a>';
+
+                if(h3[i]){
+                    tmpl += '<ul>'
+                    for(var j=0;j<h3[i].length;j++){
+                        tmpl += '<li class="h3"><a href="#" data-id="'+h3[i][j].id+'">'+h3[i][j].name+'</a></li>';
+                    }
+                    tmpl += '</ul></li>';
+                }
+
+                tmpl += '</li>';
+            }
+            tmpl += '</ul>';
+
+            return tmpl;
+        },
+        _genIndex : function(){
+            var that = this;
+            var tmpl = that._genTmpl();
+            var indexCon = '<div id="menu"><h3>内容目录</h3><hr><div id="menuIndex"></div></div>';
+
+            $('#menuContent').append(indexCon);
+
+            $('#menuIndex')
+                .append($(tmpl))
+                .delegate('a','click',function(e){
+                    e.preventDefault();
+
+                    var selector = $(this).attr('data-id') ? '#'+$(this).attr('data-id') : 'h1'
+                    var scrollNum = $(selector).offset().top;
+
+                    $('body, html').animate({ scrollTop: scrollNum-30 }, 400, 'swing');
+                });
+        },
+        run : function(){
+            var that = this, $dropdownMenu = $("#post-menu").find('.dropdown-menu');
+            var ie6 = ($.browser.msie && $.browser.version=="6.0") ? true : false;
+            if( $('.lotus-post h2').length<3 || isMobile.any() || ie6) {
+                $("#post-menu").hide();
+                return false;
+            }
+            $("#post-menu").css({
+                'margin-left': that._changeLeft() + "px"
+            });
+            that._genIndex();
+
+            $("#post-menu").find('.dropdown-toggle').on('click', function(e) {
+                event.preventDefault();
+                $dropdownMenu.toggle();
+            });
+            $(document).on('click',function(event){
+                $target = $(event.target);
+                if ( $target.parents('#post-menu').length<=0 && !$dropdownMenu.is(":hidden") ){
+                    $dropdownMenu.hide();
+                }
+            });
+
+            jQuery(window).resize(function() {
+                that._resizeWindow(that._changeLeft());
+            });
+        }
+    }
+
+    /**
      * iLotus JS init
      */
     iLotus.init = {
         run: function() {
             iLotus.goTop.run();
             iLotus.changeTheme.init();
+            iLotus.buildMenu.run();
         }
     };
     //run

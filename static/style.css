@@ -601,6 +601,52 @@ h1, h2, h3, h4, h5, h6{ font-weight: 500; font-weight: 700\9; color:#333; }
 	background: url(images/404.png) no-repeat center 0;
 }
 
+#post-menu{
+  color:#333;
+  margin-top: 10px;
+  position: fixed;
+  z-index: 10;
+}
+#post-menu .dropdown-toggle{
+  cursor: pointer;
+}
+#post-menu .dropdown-menu {
+  display: none;
+}
+#menuContent{
+  position: relative;
+}
+#menu{
+  background-clip: padding-box;
+  border-radius: 4px;
+  float: left;
+  font-size: 14px;
+  list-style: none outside none;
+  margin: 2px 0 0;
+  min-width: 330px;
+  position: absolute;
+  padding: 5px 15px 20px;
+  top: 100%;
+  z-index: 1000;
+  background: #f3f2ee;
+  right: 0;
+  left: auto;
+  border: 1px solid rgba(0,0,0,.2);
+  -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+  box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+#menu hr {
+  margin: 10px 0;
+  border: 0;
+  border-bottom: 1px dashed #cfcfcf;
+}
+#menuIndex{
+  padding: 5px 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 340px;
+}
+
 .lotus-post img:hover {
     cursor: pointer;
 }
@@ -711,6 +757,7 @@ h1, h2, h3, h4, h5, h6{ font-weight: 500; font-weight: 700\9; color:#333; }
  * iLight
 *************************/
 .iLight { color: #080808; background: #FEFEFE; }
+.iLight #menu{background: #FEFEFE;}
 .iLight .lotus-nav {
     background: #f1f1ed;
 	background: -moz-linear-gradient( 180deg, #e3e3e3 0%, #f1f1ed 8%, #f1f1ed 14%, #f1f1ed 100%);
