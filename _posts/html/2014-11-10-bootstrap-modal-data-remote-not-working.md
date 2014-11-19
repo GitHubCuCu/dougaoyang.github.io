@@ -10,7 +10,7 @@ keywords: bootstrap, data-remote, html
 
 　　最近在公司更新一个项目是发现一个问题，就是bootstrap的模态框的data-remote属性没有效果，但是发现老项目里是有效果的，发现很奇怪，Google后终于发现问题所在，于是记录下来。
 
-　　链接地址 [http://stackoverflow.com/questions/18378720/bootstrap-3-with-remote-modal](http://stackoverflow.com/questions/18378720/bootstrap-3-with-remote-modal)
+　　链接地址 <http://stackoverflow.com/questions/18378720/bootstrap-3-with-remote-modal>
 
 　　原因是在bootstrap3.1之后modal的一些属性发生了变化，远程的内容要插入到`.modal-content`选择器里面。可以看一下两者的区别。
 
