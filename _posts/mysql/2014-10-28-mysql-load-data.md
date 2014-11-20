@@ -6,6 +6,8 @@ description: 使用mysql的load data来快速的导入导出数据
 keywords: mysql, dump, load, infile, outfile
 ---
 
+##1. 准备
+
 当我们需要备份数据库时，需要导出数据，我们一般是使用mysqldump命令来进行数据的导出，下面我们先来试验一下
 
 首先创建一张表
@@ -19,7 +21,7 @@ keywords: mysql, dump, load, infile, outfile
 
 	INSERT INTO `t1` VALUES (1,'tom'),(2,'jack'),(3,'rose');  
 
-##mysqldump导出
+##2. mysqldump导出
 
 然后使用mysqldump开始备份
 
@@ -44,7 +46,7 @@ keywords: mysql, dump, load, infile, outfile
 
 于是我们就需要在导出的时候避开这些语句，这里就要用到load的infile和outfile来导入导出数据。
 
-##outfile导出
+##3. outfile导出
 
 导出outfile的使用
 ----------------
@@ -86,7 +88,9 @@ keywords: mysql, dump, load, infile, outfile
 
 -------
 
-###用outfile导出数据
+##3. mysqldump和load data比较
+
+###3.1. 用outfile导出数据
 
 	mysql> select * from t1 into outfile "/tmp/outfile.sql";
 	Query OK, 10485760 rows affected (2.43 sec)
@@ -95,13 +99,13 @@ keywords: mysql, dump, load, infile, outfile
 
 
 
-###使用mysqldump导出数据
+###3.2. 使用mysqldump导出数据
 
 ![导出时间][2]
 
 发现导出需要12秒左右，是outfile的5倍左右
 
-###比较两个文件的大小
+###3.3. 比较两个文件的大小
 
 ![文件大小][3]
 
@@ -109,7 +113,7 @@ keywords: mysql, dump, load, infile, outfile
 
 -------
 
-###使用load data infile导入
+###3.4. 使用load data infile导入
 
 	mysql> load data infile "/tmp/outfile.sql" into table t1;    
 	Query OK, 10485760 rows affected (12.46 sec)
@@ -125,7 +129,7 @@ keywords: mysql, dump, load, infile, outfile
 
 发现导入的速度也是不慢的
 
-##远程导入数据
+##4. 远程导入数据
 假设客户端与mysql服务器不在同一机器，导入文件在客户端机器上 d:/outfile.sql ，在客户机登录mysql后，执行下面导入语句：
 
 	load data local infile  "d:/outfile.sql" into table t1;

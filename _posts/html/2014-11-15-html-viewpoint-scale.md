@@ -6,12 +6,12 @@ description: 自动适应移动端网页宽度，并控制缩放比例
 keywords: html, 移动端, 自适应, viewpoint
 ---
 
-##添加元标签
+##1. 添加元标签
 wap2.0网页的head里加入下面这条元标签，在iPhone的浏览器中页面将以原始大小显示，并不允许缩放。
 
     <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0;user-scalable=0;" />
 
-##参数说明
+##2. 参数说明
 
 width - viewport的宽度 
 

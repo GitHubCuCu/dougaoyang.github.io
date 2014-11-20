@@ -6,10 +6,10 @@ description: 当root用户密码忘记时，通过跳过授权表的方法来登
 keywords: mysql, password, 授权
 ---
 
-##问题
+##1. 问题
 当我们使用mysql数据库时，可能会遇到忘记mysql密码的情况，当遇到这种情况时，本人的第一反应是：坑爹啊，重装一个吧！（PS：感觉好弱吧），后来遇到的多了，也就有了解决的办法了。
 
-##解决办法
+##2. 解决办法
 停止mysql进程
 >service mysqld stop 或者 pkill mysqld
 
@@ -27,7 +27,7 @@ keywords: mysql, password, 授权
 
 修改完密码后，要记得重启服务，就可以使用新密码正常登录了
 
-##PS：修改用户密码还有下面几种方法
+####PS：修改用户密码还有下面几种方法
     set password for root@localhost=password("123");  
     set password=password("123"); 
 
