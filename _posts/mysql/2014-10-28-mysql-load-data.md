@@ -49,7 +49,6 @@ keywords: mysql, dump, load, infile, outfile
 ##3. outfile导出
 
 导出outfile的使用
-----------------
 
 	SELECT * FROM `t1` INTO OUTFILE "/tmp/t1.outfile.sql"
 
@@ -66,7 +65,7 @@ keywords: mysql, dump, load, infile, outfile
 可以看到只导出了数据，而不存在表的结构和其他不相干的语句，这样就大大减少了导出数据的量，当大数据量时，速度就会明显提升了
 
 导入load data的使用
-------------------
+
 
 	LOAD DATA INFILE "/tmp/t1.outfile.sql" INTO TABLE `t1`
 
@@ -74,8 +73,10 @@ keywords: mysql, dump, load, infile, outfile
 
 	LOAD DATA INFILE "/tmp/t1.outfile.sql" INTO TABLE `t1`(`id`)
 
-比较速度
+
 -------
+
+##3. mysqldump和load data比较
 
 下面进行一下实际操作，在t1表中插入1000万行数据进行导入导出速度的比较。
 
@@ -85,10 +86,6 @@ keywords: mysql, dump, load, infile, outfile
 	+----------+
 	| 10485760 |
 	+----------+
-
--------
-
-##3. mysqldump和load data比较
 
 ###3.1. 用outfile导出数据
 
