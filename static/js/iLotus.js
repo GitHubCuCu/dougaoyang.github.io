@@ -350,7 +350,7 @@ $(document).ready(function() {
             });
             $(document).on('click',function(event){
                 $target = $(event.target);
-                if ( $target.parents('#post-menu').length<=0 && !$dropdownMenu.is(":hidden") ){
+                if ( !$dropdownMenu.is(":hidden") && $target.parents('#post-menu').length<=0 ){
                     $dropdownMenu.hide();
                 }
             });

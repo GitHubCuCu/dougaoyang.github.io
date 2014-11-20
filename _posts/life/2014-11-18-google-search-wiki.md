@@ -346,7 +346,7 @@ perso.club-internet.fr/calyx/bigbang/ – 3k – Cached – Similar pages
 
 网路上的成人内容浩如烟海，而且很多站点具有欺骗或者其他不良企图，流览者很容易掉入其中的陷阱。为此，Google新设立了成人内容过滤功能，见Google的设置页面，<http://www.Google.com/preferences>，最底下有一个选项SafeSearch Filtering。不过，中文状态下的Google尚没有这个功能。
 
-##14. Google尚未发佈的一些新特性和功能
+##14. Google尚未发布的一些新特性和功能
 
 ###14.1. 对网页更新日期做出限定“daterange:”
 
