@@ -23,7 +23,7 @@ keywords: mysql, password, 授权
 
 登录之后，就可以修改root的登录密码
 
-    update set mysql.user set password=password("123") where user="root" and host="localhost"; 
+    update mysql.user set password=password("123") where user="root" and host="localhost"; 
 
 修改完密码后，要记得重启服务，就可以使用新密码正常登录了
 
