@@ -57,7 +57,7 @@ __2013.6 - 2014.5：苏州市学易软件有限公司，PHP工程师__
 - 数据库：熟悉MySQL，了解MongoDB和Redis
 - 服务器：熟悉Apache和Nginx
 - 操作平台：Linux和Windows
-- 版本管理：Svn和Git
+- 版本管理：SVN和Git
 - Web框架：ThinkPHP，CodeIgniter，Yii
 - 缓存机制：熟悉Memcache
 
