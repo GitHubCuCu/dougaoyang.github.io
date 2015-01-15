@@ -167,27 +167,27 @@ xhr.send(null);
 
 第一种是先加载一个js文件，里面就只包含了动态加载脚本所需的代码：`loadScript函数`。然后用调用它来加载页面其他元素。
 
-```
-<script type="text/javascript" src="loader.js"></script>
-<script type="text/javascript">
-    loadScript("the-rest.js", function(){
-        Application.init();
-    });
-</script>
-```
+
+    <script type="text/javascript" src="loader.js"></script>
+    <script type="text/javascript">
+        loadScript("the-rest.js", function(){
+            Application.init();
+        });
+    </script>
+
 
 第二种与第一种类似，只是将`loadScript函数`嵌入在页面中，这可以避免另一次 HTTP 请求。
 
-```
-<script type="text/javascript">
-    function loadScript(url, callback){
-        // 函数内容
-    }
-    loadScript("the-rest.js", function(){
-        Application.init();
-    });
-</script>
-```
+
+    <script type="text/javascript">
+        function loadScript(url, callback){
+            // 函数内容
+        }
+        loadScript("the-rest.js", function(){
+            Application.init();
+        });
+    </script>
+
 
 作为一个更通用的工具，Yahoo! Search创建了LazyLoad 库，可自行Google下载并使用。
 
