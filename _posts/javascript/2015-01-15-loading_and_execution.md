@@ -14,9 +14,7 @@ HTML页面的加载速度与JavaScript的阻塞特性有着密切的关系，当
 ##2.脚本位置
 众所周知，一个`<script>`标签可以放在HTML文档的`<head>`或`<body>`标签中，并且可以多次出现。而脚本放置的位置对页面的加载速度有着重要的影响。
 
-上文说道，脚本会阻塞页面其他元素的加载，当放到`<head>`标签里面，页面会等到脚本文件加载完毕，才会继续向下加载。请记住，浏览器在遇到`<body>`标签之前，不会渲
-染页面的任何部分。用这种方法把脚本放在页面的顶端，将导致一个可以察觉的延迟，通常表现为：页面打开时，首先显示为一幅空白的页面，而此时用户即不能阅读，也不能与页面进行交互操作。例如：
-
+首先看一个例子：
 ```HTML
 <!DOCTYPE html>
 <html lang="en">
@@ -167,18 +165,18 @@ xhr.send(null);
 
 第一种是先加载一个js文件，里面就只包含了动态加载脚本所需的代码：`loadScript函数`。然后用调用它来加载页面其他元素。
 
-
+```HTML
     <script type="text/javascript" src="loader.js"></script>
     <script type="text/javascript">
         loadScript("the-rest.js", function(){
             Application.init();
         });
     </script>
-
+```
 
 第二种与第一种类似，只是将`loadScript函数`嵌入在页面中，这可以避免另一次 HTTP 请求。
 
-
+```HTML
     <script type="text/javascript">
         function loadScript(url, callback){
             // 函数内容
@@ -187,7 +185,7 @@ xhr.send(null);
             Application.init();
         });
     </script>
-
+```
 
 作为一个更通用的工具，Yahoo! Search创建了LazyLoad 库，可自行Google下载并使用。
 
@@ -197,7 +195,6 @@ xhr.send(null);
 
 - 将`<script>`标签放置在页面的底部，紧靠`</body>`标签的上方。
 - 将脚本成组打包，减少页面`<script>`标签的数量，不论外部脚本文件还是内联代码都是如此。
-- 非阻塞方式下载 JavaScript：1、动态创建<script>元素，用它下载并执行代码；2、用 XHR 对象下载代码，并注入到页面中
-
+- 非阻塞方式下载 JavaScript：1、动态创建`<script>`元素，用它下载并执行代码；2、用 XHR 对象下载代码，并注入到页面中
 
 [1]: /images/20150115191022.png "页面运行情况"
