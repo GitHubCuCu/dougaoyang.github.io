@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 《高性能JavaScript》读书笔记-目录
+title: 《高性能JavaScript》读书笔记
 category: JavaScript
 description: 对写出高性能的js代码的理解和心得
 keywords: JavaScript,高性能,优化,笔记
