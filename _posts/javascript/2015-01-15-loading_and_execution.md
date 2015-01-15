@@ -15,6 +15,7 @@ HTML页面的加载速度与JavaScript的阻塞特性有着密切的关系，当
 众所周知，一个`<script>`标签可以放在HTML文档的`<head>`或`<body>`标签中，并且可以多次出现。而脚本放置的位置对页面的加载速度有着重要的影响。
 
 首先看一个例子：
+
 ```HTML
 <!DOCTYPE html>
 <html lang="en">
