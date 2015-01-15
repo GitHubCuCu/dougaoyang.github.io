@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 解决php处理jpg格式图片的问题
-category: php服务器脚本
+category: PHP服务器脚本
 description: 解决php处理jpg格式图片的问题，在编辑jpg格式的图片是遇到的问题
 keywords: php, jpg
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: mysql的root用户密码丢失解决办法
-category: mysql数据库
+category: MySQL数据库
 description: 当root用户密码忘记时，通过跳过授权表的方法来登录mysql，并且修改密码
 keywords: mysql, password, 授权
 ---

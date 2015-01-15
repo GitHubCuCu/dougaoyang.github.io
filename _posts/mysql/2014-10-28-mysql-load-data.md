@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 使用load导出mysql表数据
-category: mysql数据库
+category: MySQL数据库
 description: 使用mysql的load data来快速的导入导出数据
 keywords: mysql, dump, load, infile, outfile
 ---
