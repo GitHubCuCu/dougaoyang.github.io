@@ -1,0 +1,12 @@
+---
+layout: post
+title: 《高性能JavaScript》读书笔记-目录
+category: JavaScript
+description: 对写出高性能的js代码的理解和心得
+keywords: JavaScript,高性能,优化,笔记
+---
+
+最近读了《高性能JavaScript》一书，感觉受益良多。发现以前书写js代码方面有着许多的误区和不足，对js的理解还不够深刻，特此记录下阅读该书的笔记和心得，望于各位共同进步。
+
+
+__未完待续...__
