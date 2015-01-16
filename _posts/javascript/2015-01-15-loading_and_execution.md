@@ -1,6 +1,6 @@
 ---
 layout: post
-title: HTML页面中JavaScript的加载和运行情况
+title: JavaScript脚本在HTML页面中的加载和运行情况
 category: JavaScript
 description: js在页面中的阻塞和非阻塞方式的研究和优化
 keywords: JavaScript,加载,页面阻塞
