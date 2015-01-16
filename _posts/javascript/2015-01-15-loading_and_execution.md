@@ -27,16 +27,18 @@ HTML页面的加载速度与JavaScript的阻塞特性有着密切的关系，当
     <script src="http://libs.baidu.com/highcharts/2.2.5/highcharts.js"></script>
 </head>
 <body>
+    <img src="http://www.baidu.com/img/bdlogo.png" alt="">
     <p>Hello,World~~</p>
 </body>
 </html>
 ```
-页面运行情况
+页面运行情况（IE8）
+
 ![页面运行情况][1]
 
-上图中，可以看出JavaScript文件阻塞了其他文件的下载过程，而且看到第二个脚本和第一个脚本有一个明显的延时过程，这是由于每个文件必须等待前一个文件下载完成并运行完之后，才会开始自己的下载过程，而在这过程中页面时空白的。
+上图中，可以看出JavaScript文件阻塞了其他文件（图片）的下载过程。
 
-可能有时候我们会看到有多个脚本同时下载，并没有延时的情况。这是由于大多数的现在浏览器，如IE8+、Chrome2+、和FireFox3.5+会允许多个脚本并行下载，但是JavaScript的下载依然会阻止其他元素的下载，如图片等。而且页面依旧要等待所有JavaScript代码下载并执行完成之后才能继续加载
+当然，这是IE8下面的情况，在大多数现代浏览器中已经支持并行下载，不会出现这样的延时情况了，如Chrome2+、FireFox3.5+和Opera等。可能有时候我们会看到有多个脚本同时下载，并没有延时的情况。这是由于大多数的现在浏览器，如IE8+、Chrome2+、和FireFox3.5+会允许多个脚本并行下载，但是JavaScript的下载依然会阻止其他元素的下载，如图片等。而且页面依旧要等待所有JavaScript代码下载并执行完成之后才能继续加载
 
 因为脚本阻塞其他页面资源的下载过程， 所以推荐的办法是： 将所有`<script>`标签放在尽可能接近`<body>`标签底部的位置，尽量减少对整个页面下载的影响。例如：
 
@@ -49,16 +51,19 @@ HTML页面的加载速度与JavaScript的阻塞特性有着密切的关系，当
 </head>
 <body>
     <p>Hello,World~~</p>
+    <img src="http://www.baidu.com/img/bdlogo.png" alt="">
     <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
     <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.js"></script>
     <script src="http://libs.baidu.com/highcharts/2.2.5/highcharts.js"></script>
 </body>
 </html>
 ```
+页面运行情况（IE8）
 
-** 的第一条定律：将脚本放在底部。**
+![页面运行情况][2]
 
-##3.成组脚本
+
+##3.脚本数量
 减少页面的`<script>`的总数也可以改善页面的加载速度。每当页面解析碰到一个`<script>`标签时，紧接着有一段时间用于代码执行。最小化这些延迟时间可以改善页面的整体性能。
 
 每个 HTTP 请求都会产生额外的性能负担，下载一个 100KB 的文件比下载四个 25KB 的文件要快。总之，减少引用外部脚本文件的数量。例如，可以讲一个网页的多个JavaScript文件整合成一个文件，这样就只需一个`<script>`标签，可以提升性能。
@@ -75,7 +80,7 @@ DOM允许你使用 JavaScript 动态创建 HTML 的几乎全部文档内容，�
 var script = document.createElement ("script");
 script.type = "text/javascript";
 script.src = "file1.js";
-document.getElementsByTagName_r("head")[0].appendChild(script);
+document.getElementsByTagName("head")[0].appendChild(script);
 ```
 新的`<script>`元素加载 file1.js 源文件。此文件当元素添加到页面之后立刻开始下载。此技术的重点在于：无论在何处启动下载，文件的下载和运行都不会阻塞其他页面处理过程。你甚至可以将这些代码放在`<head>`部分而不会对其余部分的页面代码造成影响。
 
@@ -112,7 +117,7 @@ function loadScript(url, callback){
         };
     }
     script.src = url;
-    document.getElementsByTagName_r("head")[0].appendChild(script);
+    document.getElementsByTagName("head")[0].appendChild(script);
 }
 ```
 
@@ -188,6 +193,10 @@ xhr.send(null);
     </script>
 ```
 
+页面运行情况（IE8）
+![页面运行情况][3]
+
+
 作为一个更通用的工具，Yahoo! Search创建了LazyLoad 库，可自行Google下载并使用。
 
 ##5.总结
@@ -198,4 +207,6 @@ xhr.send(null);
 - 将脚本成组打包，减少页面`<script>`标签的数量，不论外部脚本文件还是内联代码都是如此。
 - 非阻塞方式下载 JavaScript：1、动态创建`<script>`元素，用它下载并执行代码；2、用 XHR 对象下载代码，并注入到页面中
 
-[1]: /images/20150115191022.png "页面运行情况"
+[1]: /images/20150115191022.jpg "页面运行情况"
+[2]: /images/20150116100430.jpg "页面运行情况"
+[3]: /images/20150116101240.jpg "页面运行情况"
