@@ -36,7 +36,7 @@ function Dog() {
 var hei = new Dog();
 ```
 
-##2.构造函数
+##3.构造函数
 构造函数就是构造一个对象(一堆属性)的一个规则,造完后就和该对象无关了。
 
 分析一下上面的构造函数实例化`new Dog()`的过程
@@ -64,7 +64,7 @@ function Pig() {
 
 可以看到两种方式返回的结果并不一样，当return的值为对象是返回的就不是Pig对象，是一个新的Object了。
 
-##3.对象的原型
+##4.对象的原型
 对象可以有两种类型的成员：实例成员（也称作“own”成员）和原型成员。实例成员直接存在于实例自身，而原型成员则从对象原型继承。
 
 对象通过一个内部属性绑定到它的原型，Firefox， Safari，和 Chrome 中开放了该属性，叫做`__proto__`。
@@ -76,7 +76,7 @@ var obj = {location:'天朝',hobby:'台球'};
 console.log(obj.__proto__)  // Object {}
 ```
 
-##3.实例与原型的关系
+##5.实例与原型的关系
 
 ```JavaScript
 var cat = { name: "kitty", age: "3"};
@@ -96,7 +96,7 @@ console.log("name" in cat); //true
 console.log("toString" in cat); //true
 ```
 
-##4.原型链
+##6.原型链
 js中没有类的概念, 只有对象的概念。所以一切类型都是一个实例对象，它们继承原型的所有方法。也可以用“构造器（prototype）”创建一个类型的原型。
 
 ```JavaScript
