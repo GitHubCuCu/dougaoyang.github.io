@@ -29,6 +29,7 @@ timezone:      null
 
 #站点基础配置
 title: 当当虾的编程记录
+url: http://dougaoyang.github.io
 subTitle: 这个世界上，没有什么东西是得不到的，只有抓不住而从掌心中悄然流走的...
 description: 这里记录了我在编程时遇到的一些问题，和解决这些问题的一些方法。还有一些是我对编程的一些看法观点，以及学习语言时的一些笔记和心得体会。
 feed: /atom.xml
