@@ -10,6 +10,6 @@ keywords: JavaScript,高性能,优化,笔记
 
 1. [JavaScript脚本在HTML页面中的加载和运行情况](/2015/01/15/loading_and_execution.html)
 2. [JavaScript作用域链分析](/2015/01/16/scope_chains.html)
-3. [JavaScript脚本在HTML页面中的加载和运行情况](/2015/01/16/data_access.html)
+3. [JavaScript数据访问对性能的影响](/2015/01/16/data_access.html)
 
 __未完待续...__
