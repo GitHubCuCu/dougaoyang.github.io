@@ -11,31 +11,31 @@ title : Sitemap
 <url>
 <loc>{{ site.url }}</loc>
 <priority>1.00</priority>
-<lastmod>2015-01-19</lastmod>
+<lastmod>{{ site.time | date_to_utc | date: '%Y-%m-%d' }}</lastmod>
 <changefreq>weekly</changefreq>
 </url>
 <url>
 <loc>{{ site.url }}/index.html</loc>
 <priority>0.5</priority>
-<lastmod>2015-01-19</lastmod>
+<lastmod>{{ site.time | date_to_utc | date: '%Y-%m-%d' }}</lastmod>
 <changefreq>weekly</changefreq>
 </url>
 <url>
 <loc>{{ site.url }}/archives.html</loc>
 <priority>0.5</priority>
-<lastmod>2015-01-19</lastmod>
+<lastmod>{{ site.time | date_to_utc | date: '%Y-%m-%d' }}</lastmod>
 <changefreq>weekly</changefreq>
 </url>
 <url>
 <loc>{{ site.url }}/categories.html</loc>
 <priority>0.5</priority>
-<lastmod>2015-01-19</lastmod>
+<lastmod>{{ site.time | date_to_utc | date: '%Y-%m-%d' }}</lastmod>
 <changefreq>weekly</changefreq>
 </url>
 <url>
 <loc>{{ site.url }}/links.html</loc>
 <priority>0.5</priority>
-<lastmod>2015-01-19</lastmod>
+<lastmod>{{ site.time | date_to_utc | date: '%Y-%m-%d' }}</lastmod>
 <changefreq>weekly</changefreq>
 </url>
 

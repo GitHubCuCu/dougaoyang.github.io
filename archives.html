@@ -30,7 +30,7 @@ keywords: 博客, 编程, 笔记, php, mysql, linux
             {% for _post in site.posts %}
                 {% capture _this_month %}{{ _post.date | date: "%b %Y" }}{% endcapture %}
                 {% if _this_month == saved_month %}
-                    <li>{{ _post.date | date: "%d日" }} : <a href="{{ _post.url }}" title="{{ _post.title }}">{{ _post.title }}</a></li>
+                    <li>{{ _post.date | date: "%d日" }} : <a href="{{ site.url }}{{ _post.url }}" title="{{ _post.title }}">{{ _post.title }}</a></li>
                 {% endif %}
             {% endfor %}
                 </ul>
@@ -45,7 +45,7 @@ keywords: 博客, 编程, 笔记, php, mysql, linux
         {% for _post in site.posts %}
             {% capture _this_month %}{{ _post.date | date: "%b %Y" }}{% endcapture %}
             {% if _this_month == saved_month %}
-                <li>{{ _post.date | date: "%d日" }} : <a href="{{ _post.url }}" title="{{ _post.title }}">{{ _post.title }}</a></li>
+                <li>{{ _post.date | date: "%d日" }} : <a href="{{ site.url }}{{ _post.url }}" title="{{ _post.title }}">{{ _post.title }}</a></li>
             {% endif %}
         {% endfor %}
             </ul>

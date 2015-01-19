@@ -20,7 +20,7 @@ keywords: 博客, 编程, 笔记, php, mysql, linux
         {% if category.last.size %}
             <ul>
             {% for post in category.last %}
-                <li><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+                <li><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
             {% endfor %}
             </ul>
         {% endif %}

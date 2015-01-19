@@ -6,13 +6,13 @@ keywords: 博客, 编程, 笔记, php, mysql, linux
 ---
 <section class="lotus-logo fn-clear">
     <hgroup class="violet-site">
-        <h1><a href="{{ site.url }}/" >{{ site.title }}</a></h1>
+        <h1><a href="{{ site.url }}{{ site.url }}/" >{{ site.title }}</a></h1>
         <h2>{{ site.subTitle }}</h2>
     </hgroup><!-- //violet-site -->
 </section>
 <article class="lotus-article">
 {% for rpost in site.posts limit:1 %}
-    <h3><a href="{{ rpost.url }}" title="{{ rpost.title }}" rel="bookmark">{{ rpost.title }}</a></h3>
+    <h3><a href="{{ site.url }}{{ rpost.url }}" title="{{ rpost.title }}" rel="bookmark">{{ rpost.title }}</a></h3>
     <p itemprop="description">{{ rpost.description }}</p>
     <p class="lotus-date">{{ rpost.date | date_to_utc | date: '%Y.%m.%d' }}</p>
 {% endfor %}
@@ -22,7 +22,7 @@ keywords: 博客, 编程, 笔记, php, mysql, linux
     <h3>最新文章</h3>
         <ul>
             {% for npost in site.posts limit:5 offset:1 %}
-            <li><a href="{{ npost.url }}" pubdate="{{ npost.date | date_to_utc | date: '%Y-%m-%d' }}" title="{{ npost.title }}" rel="bookmark">{{ npost.title }}</a></li>
+            <li><a href="{{ site.url }}{{ npost.url }}" pubdate="{{ npost.date | date_to_utc | date: '%Y-%m-%d' }}" title="{{ npost.title }}" rel="bookmark">{{ npost.title }}</a></li>
             {% endfor %}
         </ul>
     </article>
@@ -31,7 +31,7 @@ keywords: 博客, 编程, 笔记, php, mysql, linux
     <ul>
         <li>
             {% for page in site.page %}
-            <a href="{{ page.url }}" rel="bookmark" title="{{page.text}}">{{ page.text }}</a>
+            <a href="{{ site.url }}{{ page.url }}" rel="bookmark" title="{{page.text}}">{{ page.text }}</a>
             {% if !page.last %}
                 <span class="lotus-squ">|</span>
             {% endif %}
