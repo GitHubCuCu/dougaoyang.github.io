@@ -45,7 +45,7 @@
                 {% assign link_target = 'target="_blank"' %}
             {% endif %}
             <li class="{{ homeClass }}">
-                <a {{ link_target }} href="{{ site.url }}{{ link.url }}" rel="bookmark" title="{{link.text}}">
+                <a {{ link_target }} href="{{ link.url }}" rel="bookmark" title="{{link.text}}">
                     <i id="{{ link.id }}" class="{{ link.icon }}"></i>
                 </a>
                 {{ indicator }}
