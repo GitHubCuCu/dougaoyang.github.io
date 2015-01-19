@@ -10,11 +10,7 @@
     <meta charset="UTF-8" />
     <title>
         {% if page.title %}
-            {% if page.category %}
-                {{ page.title }}_{{ page.category }}_{{ site.title }}
-            {% else %}
-                {{ page.title }}_{{ site.title }}
-            {% endif %}
+            {{ page.title }}
         {% else %}
             {{ site.title }}
         {% endif %}

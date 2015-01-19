@@ -1,0 +1,10 @@
+User-Agent: Googlebot
+Disallow: /jl.md
+Disallow: /jl.html
+Disallow: /contact.html
+
+User-Agent: Baiduspider
+Disallow: /jl.md
+Disallow: /jl.html
+Disallow: /contact.html
+
