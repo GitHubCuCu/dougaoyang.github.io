@@ -12,6 +12,8 @@ keywords: JavaScript,高性能,优化,笔记
 2. [JavaScript作用域链分析](/2015/01/16/scope_chains.html)
 3. [JavaScript数据访问对性能的影响](/2015/01/17/data_access.html)
 4. [JavaScript原型链分析](/2015/01/19/prototype_chains.html)
-4. [JavaScript对象的嵌套成员对性能的影响](/2015/01/20/nested_members.html)
+5. [JavaScript对象的嵌套成员对性能的影响](/2015/01/20/nested_members.html)
+6. [JavaScript在访问和操作DOM对象的注意点](/2015/01/22/dom_scripting.html)
+7. [JavaScript采用事件托管提高事件处理的效率](/2015/01/23/event_delegation.html)
 
 __未完待续...__
