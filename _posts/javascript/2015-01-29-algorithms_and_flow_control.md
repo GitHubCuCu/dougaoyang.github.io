@@ -3,7 +3,7 @@ layout: post
 title: JavaScript流程控制对性能的影响
 category: JavaScript
 description: 代码整体结构是执行速度的决定因素之一。语言中流程控制的写法对性能有着密切关联。
-keywords: JavaScript,事件托管,页面元素,高性能,优化,笔记
+keywords: JavaScript,流程控制,循环,条件判断,高性能,优化,笔记
 ---
 
 ##1.前言
