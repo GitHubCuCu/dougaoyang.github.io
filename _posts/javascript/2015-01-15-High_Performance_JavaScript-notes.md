@@ -15,7 +15,7 @@ keywords: JavaScript,高性能,优化,笔记
 5. [JavaScript对象的嵌套成员对性能的影响](/2015/01/20/nested_members.html)
 6. [JavaScript在访问和操作DOM对象的注意点](/2015/01/22/dom_scripting.html)
 7. [JavaScript采用事件托管提高事件处理的效率](/2015/01/23/event_delegation.html)
-8. [JavaScript流程控制对性能的影响](algorithms_and_flow_control.html)
-9. [JavaScript中正则表达式的工作原理和优化](regular_expression_optimization.html)
+8. [JavaScript流程控制对性能的影响](/2015/01/29/algorithms_and_flow_control.html)
+9. [JavaScript中正则表达式的工作原理和优化](/2015/01/30/regular_expression_optimization.html)
 
 __未完待续...__
