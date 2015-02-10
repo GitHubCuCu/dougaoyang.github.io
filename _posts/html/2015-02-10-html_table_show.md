@@ -14,8 +14,8 @@ keywords: html, 表格, 移动端, 自适应, viewpoint
 
 首先一个普通的表格
 
-
 ```
+
 <table>
   <thead>
     <tr>
@@ -52,6 +52,7 @@ keywords: html, 表格, 移动端, 自适应, viewpoint
     </tr>
   </tbody>
 </table>
+
 ```
 
 它在窄距设备是这样展示的
@@ -62,8 +63,8 @@ keywords: html, 表格, 移动端, 自适应, viewpoint
 
 这里我们设置的端点是`600px`。
 
-
 ```CSS
+
 @media (max-width: 600px) {
     table thead {
         display: none;
@@ -76,7 +77,6 @@ keywords: html, 表格, 移动端, 自适应, viewpoint
         padding-bottom: 13px;
         text-align: left;
     }
-
     table td:before {
         content: attr(data-th) " :";
         display: inline-block;
@@ -88,8 +88,8 @@ keywords: html, 表格, 移动端, 自适应, viewpoint
         max-height: 100%;
     }
 }
-```
 
+```
 
 它在窄距设备是这样展示的
 
