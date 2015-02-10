@@ -14,6 +14,7 @@ keywords: html, 表格, 移动端, 自适应, viewpoint
 
 首先一个普通的表格
 
+
 ```HTML
 <table>
   <thead>
@@ -53,6 +54,7 @@ keywords: html, 表格, 移动端, 自适应, viewpoint
 </table>
 ```
 
+
 它在窄距设备是这样展示的
 
 ![普通情况下表格样式][img:1]
@@ -61,32 +63,34 @@ keywords: html, 表格, 移动端, 自适应, viewpoint
 
 这里我们设置的端点是`600px`。
 
+
 ```CSS
 @media (max-width: 600px) {
-    table thead {
-        display: none;
-    }
-    table td {
-        display: block;
-        position: relative;
-        padding-left: 50%;
-        padding-top: 13px;
-        padding-bottom: 13px;
-        text-align: left;
-    }
+table thead {
+    display: none;
+}
+table td {
+    display: block;
+    position: relative;
+    padding-left: 50%;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    text-align: left;
+}
 
-    table td:before {
-        content: attr(data-th) " :";
-        display: inline-block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        width: 33%;
-        max-height: 100%;
-    }
+table td:before {
+    content: attr(data-th) " :";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 33%;
+    max-height: 100%;
+}
 }
 ```
+
 
 它在窄距设备是这样展示的
 
@@ -97,6 +101,6 @@ keywords: html, 表格, 移动端, 自适应, viewpoint
 当然这只是表格自适应的其中一种办法，还有更多的办法哦O(∩_∩)O~
 
 
-[img:1]: ../../images/20150210144726.png "普通情况下表格样式"
-[img:2]: ../../images/20150210150306.png "修改后表格样式"
+[img:1]: /images/20150210144726.png "普通情况下表格样式"
+[img:2]: /images/20150210150306.png "修改后表格样式"
 
