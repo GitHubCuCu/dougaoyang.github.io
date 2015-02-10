@@ -14,8 +14,7 @@ keywords: html, 表格, 移动端, 自适应, viewpoint
 
 首先一个普通的表格
 
-```
-
+```html
 <table>
   <thead>
     <tr>
@@ -52,7 +51,6 @@ keywords: html, 表格, 移动端, 自适应, viewpoint
     </tr>
   </tbody>
 </table>
-
 ```
 
 它在窄距设备是这样展示的
@@ -61,10 +59,9 @@ keywords: html, 表格, 移动端, 自适应, viewpoint
 
 下面利用css3的媒体查询功能来实现表格的自适应。
 
-这里我们设置的端点是`600px`。
+这里我们设置的断点是`600px`。
 
-```CSS
-
+```css
 @media (max-width: 600px) {
     table thead {
         display: none;
@@ -88,7 +85,6 @@ keywords: html, 表格, 移动端, 自适应, viewpoint
         max-height: 100%;
     }
 }
-
 ```
 
 它在窄距设备是这样展示的
