@@ -14,44 +14,33 @@ keywords: html, 表格, 移动端, 自适应, viewpoint
 
 首先一个普通的表格
 
-```html
-<table>
+```
+< table>
   <thead>
     <tr>
       <th>Country</th>
-      <th>Desktop share</th>
-      <th>Tablet share</th>
-      <th>Mobile share</th>
+      <th>Desktop</th>
+      <th>Tablet</th>
+      <th>Mobile</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td data-th="Country">India</td>
-      <td data-th="Desktop share">32%</td>
-      <td data-th="Table share">1%</td>
-      <td data-th="Mobile share">67%</td>
+      <td data-th="Desktop">32%</td>
+      <td data-th="Table">1%</td>
+      <td data-th="Mobile">67%</td>
     </tr>
     <tr>
       <td data-th="Country">GB</td>
-      <td data-th="Desktop share">69%</td>
-      <td data-th="Table share">13%</td>
-      <td data-th="Mobile share">18%</td>
-    </tr>
-    <tr>
-      <td data-th="Country">US</td>
-      <td data-th="Desktop share">69%</td>
-      <td data-th="Table share">9%</td>
-      <td data-th="Mobile share">22%</td>
-    </tr>
-    <tr>
-      <td data-th="Country">China</td>
-      <td data-th="Desktop share">86%</td>
-      <td data-th="Table share">4%</td>
-      <td data-th="Mobile share">10%</td>
+      <td data-th="Desktop">69%</td>
+      <td data-th="Table">13%</td>
+      <td data-th="Mobile">18%</td>
     </tr>
   </tbody>
 </table>
 ```
+
 
 它在窄距设备是这样展示的
 
@@ -70,8 +59,7 @@ keywords: html, 表格, 移动端, 自适应, viewpoint
         display: block;
         position: relative;
         padding-left: 50%;
-        padding-top: 13px;
-        padding-bottom: 13px;
+        padding-bottom: 15px;
         text-align: left;
     }
     table td:before {

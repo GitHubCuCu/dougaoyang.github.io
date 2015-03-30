@@ -9,7 +9,7 @@ title : Sitemap
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">	
 <url>
-<loc>{{ site.url }}</loc>
+<loc>{{ site.url }}/</loc>
 <priority>1.00</priority>
 <lastmod>{{ site.time | date_to_utc | date: '%Y-%m-%d' }}</lastmod>
 <changefreq>weekly</changefreq>
