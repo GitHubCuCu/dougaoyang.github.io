@@ -15,7 +15,7 @@ __<http://dougaoyang.github.io/>__
 ### 工作经历
 __2014.6 - 现在：江苏创龙信息技术有限公司，PHP工程师__
 
-*[众筹](http://demo.xinsixue.com/raise.html)*
+*[众筹](http://zc.91360.org/)*
 
 - 网站的整体功能，包括众筹的发起、审核、以及支付功能
 
@@ -56,10 +56,10 @@ __2013.6 - 2014.5：苏州市学易软件有限公司，PHP工程师__
 - 编程语言：熟悉PHP、JavaScript和HTML，了解Python和Node.js
 - 数据库：熟悉MySQL，了解MongoDB和Redis
 - 服务器：熟悉Apache和Nginx
+- 缓存机制：熟悉Memcache
 - 操作平台：Linux和Windows
 - 版本管理：SVN和Git
 - Web框架：ThinkPHP，CodeIgniter，Yii
-- 缓存机制：熟悉Memcache
 
 
 ### 致谢
