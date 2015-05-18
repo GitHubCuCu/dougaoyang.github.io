@@ -1,6 +1,6 @@
 ### 窦高洋
 __152-9883-6751__  
-__[gaoydou@gmail.com](mailto:gaoydou@gmail.com)__  
+__[gaoydou@gmail.com](mailto:gaoydou@gmail.com) , [1239491470@qq.com](mailto:1239491470@qq.com)__  
 __<http://dougaoyang.github.io/>__
 
 
@@ -26,14 +26,11 @@ __2014.6 - 2015.5：江苏创龙信息技术有限公司，PHP工程师__
 
 - 网站的整体功能，包括众筹的发起、审核、参加众筹以及支付功能
 
-*[91360](http://demo.xinsixue.com/)*
+*[新私学](http://www.xinsixue.com/)*
 
 - 试题和试卷（文本格式）的上传，修改和审核功能
 - pk台功能：多用户同时做题并产生排名结果
 - 试题的难度管理功能
-
-*[新私学](http://www.xinsixue.com/)*
-
 - 网站课程的管理功能
 - 大量用户的管理（分表）
 - 大量用户产生用户数据的管理和读取（前期采用文件缓存，之后采用memcache缓存）
