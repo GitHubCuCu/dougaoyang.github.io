@@ -16,7 +16,7 @@ future:       true
 unpublished:  false
 
 # Conversion
-markdown:     rdiscount
+markdown:     kramdown
 highlighter:  rouge
 lsi:          false
 excerpt_separator: "\n\n"

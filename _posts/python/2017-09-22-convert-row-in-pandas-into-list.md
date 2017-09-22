@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Convert a row in pandas into list
+title: Pandas的行数据转换为列表
 category: Python数据分析
 description: pandas行转换成list
 keywords: pandas, python, list

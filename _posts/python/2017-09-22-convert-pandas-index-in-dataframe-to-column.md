@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Convert Pandas Index In Dataframe To Column
+title: Pandas的索引转换为列数据
 category: Python数据分析
 description: pandas索引放到列中
 keywords: pandas, python, dataframe, index
