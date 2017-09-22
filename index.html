@@ -30,13 +30,16 @@ keywords: 博客, 编程, 笔记, php, mysql, linux
     <h3>相关页面</h3>
     <ul>
         <li>
-            {% for page in site.page %}
-            <a href="{{ site.url }}{{ page.url }}" rel="bookmark" title="{{page.text}}">{{ page.text }}</a>
+          {% for page in site.page %}
+            {% if page.target == '_blank' %}
+              {% assign link_target = 'target="_blank"' %}
+            {% endif %}
+            <a {{ link_target }} href="{{ page.url }}" rel="bookmark" title="{{page.text}}">{{ page.text }}</a>
             {% if page.last %}
             {% else %}
-                <span class="lotus-squ">|</span>
+              <span class="lotus-squ">|</span>
             {% endif %}
-            {% endfor %}
+          {% endfor %}
         </li>
     </ul>
     </article>

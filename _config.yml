@@ -17,7 +17,7 @@ unpublished:  false
 
 # Conversion
 markdown:     rdiscount
-highlighter:  pygments
+highlighter:  rouge
 lsi:          false
 excerpt_separator: "\n\n"
 
@@ -66,16 +66,17 @@ nav:
 page:
   - text: 文章归档
     url: /archives.html
-    last: true
+    last: false
   - text: 文章分类
     url: /categories.html
-    last: true
-  #- text: 关于我
-  #  url: /contact.html
-  #  last: true
-  - text: 友情链接
-    url: /links.html
     last: false
+  - text: 关于我
+    url: https://github.com/dougaoyang/dougaoyang.github.io/blob/master/jl.md
+    target: '_blank'
+    last: true
+  # - text: 友情链接
+  #   url: /links.html
+  #   last: false
 
 link:
   - text: E简设计

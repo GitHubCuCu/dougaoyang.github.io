@@ -35,7 +35,7 @@ ValueError: The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.i
 2  3.2  Nevada
 ```
 
-===
+---
 
 ## 附加说明
 
@@ -48,7 +48,7 @@ ValueError: The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.i
 >>> np.logical_or(x, y)
 ```
 
-或者 | 运算符
+或者 `|` 运算符
 
 ```
 >>> x | y
@@ -61,7 +61,7 @@ ValueError: The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.i
 >>> np.logical_and(x, y)
 ```
 
-或者 & 运算符
+或者 `&` 运算符
 
 ```
 >>> x & y
@@ -71,7 +71,7 @@ ValueError: The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.i
 
 除此之外还有 一些其他逻辑操作 `logical_not` 和 `logical_xor`... [查看详情](https://docs.scipy.org/doc/numpy/reference/routines.logic.html)
 
-===
+---
 
 ## 注意
 
