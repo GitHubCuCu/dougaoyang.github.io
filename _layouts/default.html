@@ -35,16 +35,16 @@
             {% for link in site.nav %}
             {% assign active = nil %}
             {% assign homeClass = nil %}
-            {% if page.url == link.url%}
+            {% if page.url == link.url %}
               {% assign active = 'current' %}
             {% endif %}
             {% if link.class == 'home' %}
-                {% assign homeClass = 'home current' %}
+                {% assign homeClass = 'home' %}
             {% endif %}
             {% if link.target == '_blank' %}
                 {% assign link_target = 'target="_blank"' %}
             {% endif %}
-            <li class="{{ homeClass }}">
+            <li class="{{ homeClass }} {{ active }}">
                 <a {{ link_target }} href="{{ link.url }}" rel="bookmark" title="{{link.text}}">
                     <i id="{{ link.id }}" class="{{ link.icon }}"></i>
                 </a>

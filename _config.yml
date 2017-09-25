@@ -42,12 +42,12 @@ nav:
     id: none
     class: home
   - text: 文章归档
-    url: /archives.html
+    url: /archives
     icon: icon-book
     id: none
     class: none
   - text: 文章分类
-    url: /categories.html
+    url: /categories
     icon: icon-list
     id: none
     class: none
@@ -65,10 +65,10 @@ nav:
 
 page:
   - text: 文章归档
-    url: /archives.html
+    url: /archives
     last: false
   - text: 文章分类
-    url: /categories.html
+    url: /categories
     last: false
   - text: 关于我
     url: https://github.com/dougaoyang/dougaoyang.github.io/blob/master/jl.md
