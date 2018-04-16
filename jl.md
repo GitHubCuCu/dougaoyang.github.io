@@ -5,7 +5,7 @@ __<http://dougaoyang.github.io/>__
 
 
 ### 教育背景
-- 常熟理工学院，物理学，毕业于2013年
+- 物理学，毕业于2013年
 
 
 ### 工作经历
@@ -71,13 +71,16 @@ __2013.6 - 2014.5：苏州市学易软件有限公司，PHP工程师__
 
 
 ### 个人项目
+*微博爬虫分析系统*
+
+　　使用python requests库抓取微博信息，通过分析微博内容做成词云
 *PHP采集系统*
 
 　　类似于dede后台采集功能的一个系统，可以模拟各终端访问采集网站，能够动态添加采集节点和采集内容并且发布到指定网站的管理系统中。`PS:留学僧使用过该系统`
 
 
 ### 技术能力
-- 编程语言：熟悉PHP、JavaScript和HTML，了解Python和Node.js
+- 编程语言：熟悉PHP、JavaScript和HTML；了解Python，Django网站开发，简单数据处理和可视化；了解Node.js，小程序开发
 - 数据库：熟悉MySQL，了解MongoDB和Redis
 - 服务器：熟悉Apache和Nginx
 - 缓存机制：熟悉Memcache
