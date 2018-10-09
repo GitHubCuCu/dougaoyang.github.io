@@ -90,7 +90,7 @@ __2013.6 - 2014.5：苏州市学易软件有限公司，PHP工程师__
 - 缓存机制：熟悉Memcache
 - 操作平台：Linux和Windows
 - 版本管理：SVN和Git
-- Web框架：ThinkPHP，CodeIgniter，Yii，slim
+- Web框架：Larval，Thinkphp5，Slim， Django
 
 
 ### 致谢
