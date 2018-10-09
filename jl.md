@@ -11,7 +11,8 @@ __<http://dougaoyang.github.io/>__
 ### 工作经历
 __2017.3 - 至今：北京友高教育科技有限公司，PHP高级开发工程师__
 
-- 课程学习小程序开发
+- 基于vue的课程学习公众号网站开发
+- 课程学习网站小程序开发
 - app接口开发
 - 基于edusoho的网校二次开发，扩展多机构的管理，竞赛报名功能开发
 - 在线编程网站的开发，包含scratch和python的在线运行
@@ -83,7 +84,7 @@ __2013.6 - 2014.5：苏州市学易软件有限公司，PHP工程师__
 
 
 ### 技术能力
-- 编程语言：熟悉PHP、JavaScript和HTML；了解Python，Django网站开发，简单数据处理和可视化；了解Node.js，小程序开发
+- 编程语言：熟悉PHP、JavaScript和HTML；了解Python，Django网站开发，简单数据处理和可视化；了解Node.js，小程序开发，vue开发
 - 数据库：熟悉MySQL，了解MongoDB和Redis
 - 服务器：熟悉Apache和Nginx
 - 缓存机制：熟悉Memcache
